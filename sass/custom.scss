@@ -1,2 +1,19 @@
+$navbar-light-toggler-border-color: #ffffff00;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.login-btn,
+.nav-item {
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.login-btn {
+  font-size: small;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.nav-item {
+    font-size: smaller;
+}
