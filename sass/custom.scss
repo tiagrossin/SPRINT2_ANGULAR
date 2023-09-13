@@ -1,6 +1,22 @@
 $navbar-light-toggler-border-color: #ffffff00;
+$primary: #5265e1;
+$secondary: #fa5959;
+$font-family-sans-serif: "Roboto Flex", sans-serif;
+$accordion-button-active-bg: #fff;
+$accordion-button-color: $primary;
 
+// IMPORT THE FUNCTIONS AND VARIABLES
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// IMPORT ALL ORIGINAL BOOTSTRAP
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
 
 .login-btn,
 .nav-item {
@@ -8,12 +24,216 @@ $navbar-light-toggler-border-color: #ffffff00;
   letter-spacing: 3px;
 }
 
-.login-btn {
+.btn-secondary {
   font-size: small;
   padding-left: 30px;
   padding-right: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  --bs-btn-hover-color: #fa5959;
+  --bs-btn-hover-bg: #ffffff;
+  --bs-btn-hover-border-color: #fa5959;
 }
 
 .nav-item {
-    font-size: smaller;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.nav-item :hover {
+  color: #fa5959;
+}
+
+// BLUE IMAGES BEHIND PICTURES
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.blue-image {
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  aspect-ratio: 2/1;
+  padding-bottom: 2rem;
+}
+
+.blue-image__right {
+  translate: -70% 45%;
+}
+
+.blue-image__left {
+  translate: -130% 45%;
+}
+
+// BUTTONS MAIN SECTION
+.btn-header,
+.btn-downloads {
+  height: 3.5em;
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+// FEATURES-SECTION NAV-BAR
+ul.nav-tabs {
+  border-bottom: 1px solid #cccccc;
+  align-items: center;
+}
+
+ul.nav-tabs li {
+  border-top: 1px solid #cccccc;
+}
+
+.features-nav .nav-item .nav-link {
+  letter-spacing: 0.05em;
+}
+
+.features-nav .nav-item .nav-link.active {
+  border-bottom: 5px solid #fa5959;
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+  align-items: center;
+  color: #363948;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  ul.nav-tabs {
+    border-bottom: 1px solid #cccccc;
+  }
+
+  ul.nav-tabs li {
+    border-top: 0;
+  }
+}
+
+// DOWNLOAD SECTION
+//BROWSER CARDS
+.browser-cards .card-text {
+  border-bottom: 5px dotted grey;
+}
+
+.card-body.shadow {
+  border-radius: 10%;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  border: 10px solid white;
+}
+
+// FAQs SECTION
+.accordion button {
+  font-weight: bold;
+}
+
+.accordion .accordion-button:not(.collapsed) {
+  outline: 5px solid white;
+}
+
+.accordion .accordion-button-text {
+  color: black;
+}
+
+button.accordion-button:not(.collapsed)::after {
+  background-image: url(../assets/icon-arrow.svg);
+  filter: invert(62%) sepia(79%) saturate(4605%) hue-rotate(326deg)
+    brightness(99%) contrast(96%);
+}
+
+// FOOTER
+.footer-navbar {
+  background-color: #242946;
+}
+
+.footer-navbar li a {
+  color: #fff;
+  align-items: flex-start;
+  font-size: 0.9em;
+  letter-spacing: 0.15em;
+}
+
+.footer-p {
+  font-size: 0.85em;
+  letter-spacing: 0.35em;
+}
+
+.form-field-email,
+.footer-button {
+  height: 2.5rem;
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.invalid-feedback {
+  position: relative;
+  top: -5px;
+  width: 15rem;
+  margin: 0 auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 2px;
+  font-style: italic;
+}
+
+// ACTIVE STATE ON HOVER FOR BUTTONS, TABS & ICONS
+.navbar .nav-link:hover {
+  color: $secondary;
+}
+
+.navbar .btn-secondary:hover {
+  color: $secondary !important;
+  background-color: #fff;
+  border: 1px solid $secondary;
+  font-weight: 700;
+}
+
+.bookmark-section .btn-primary:hover {
+  color: $primary;
+  background-color: #fff;
+  border: 2px solid $primary;
+}
+
+.bookmark-section .btn-light:hover {
+  color: $gray-700;
+  background-color: #fff;
+  border: 2px solid $gray-700;
+}
+
+.features-nav button:hover {
+  border: 0 !important;
+  color: $secondary !important;
+  font-weight: 700;
+}
+
+.btn-downloads:hover {
+  color: $primary;
+  background-color: #fff;
+  border: 2px solid $primary;
+}
+
+.faqs .accordion-button-text:hover {
+  color: $secondary !important;
+  background-color: #fff;
+  font-weight: 700;
+}
+
+.footer-button:hover {
+  color: $secondary !important;
+  background-color: #fff;
+  border: 1px solid $secondary;
+  font-weight: 700;
+}
+
+.footer-navbar .nav-link:hover {
+  color: $secondary !important;
+}
+
+.social-networks-icons:hover {
+  filter: invert(62%) sepia(79%) saturate(4605%) hue-rotate(326deg)
+    brightness(99%) contrast(96%);
 }
